@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import Header from '../../components/Header'
+import Category from '../../components/Category'
 import Footer from '../../components/Footer'
 import { connect } from 'react-redux'
 
@@ -8,9 +9,7 @@ class Home extends Component {
     return (
       <div>
         <Header cityName={this.props.userinfo.cityName} />
-        <p>
-          Home
-        </p>
+        <Category />
         <Footer />
       </div>
     )

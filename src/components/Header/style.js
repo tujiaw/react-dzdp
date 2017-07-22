@@ -42,7 +42,8 @@ Style.input = {
   borderRadius: 15,
   overflow: 'hidden',
   padding: 5,
-  paddingLeft: 25
+  paddingLeft: 25,
+  border: 0
 }
 
 export default Style

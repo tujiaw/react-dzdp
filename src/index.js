@@ -5,6 +5,7 @@ import { createStore } from 'redux'
 import App from './containers/App';
 import registerServiceWorker from './registerServiceWorker';
 import appReducers from './reducers'
+import './index.css'
 
 let store = createStore(appReducers)
 ReactDOM.render(
