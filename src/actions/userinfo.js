@@ -1,6 +1,6 @@
 import { USERINFO_UPDATE } from '../constants/actionTypes'
 
-export function update(data) {
+export const update = (data) => {
   return {
     type: USERINFO_UPDATE,
     data

@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { getAdData } from '../../../fetch/home'
-import AdList from '../../../components/AdList'
+import AdCom from '../../../components/Ad'
 import * as ActionAdinfo from '../../../actions/adinfo'
 
 class Ad extends Component {
@@ -20,7 +20,7 @@ class Ad extends Component {
     return (
       <div>
         {this.props.adinfo.success 
-          ? <AdList data={this.props.adinfo.data}/> 
+          ? <AdCom data={this.props.adinfo.data}/> 
           : <div>加载中...</div>}
       </div>
     )

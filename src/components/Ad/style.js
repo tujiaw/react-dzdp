@@ -9,7 +9,7 @@ Style.root = {
 Style.top = {
   fontSize: 16,
   fontWeight: 700,
-  padding: '10px 15px',
+  padding: '0px 0px 15px 15px',
   borderBottom: '1px solid #f1f1f1'
 }
 

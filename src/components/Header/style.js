@@ -29,8 +29,8 @@ Style.right = {
 
 Style.iconSearch = {
   position: 'relative',
-  left: 25,
-  top: 6,
+  left: 22,
+  top: 4,
   color: '#ccc',
   visibility: ''
 }
