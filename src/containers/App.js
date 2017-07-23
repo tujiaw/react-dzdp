@@ -10,10 +10,6 @@ import { CITY_NAME } from '../constants/localStoreKey'
 import * as actionsUserinfo from '../actions/userinfo'
 
 class App extends Component {
-  constructor(props, context) {
-    super(props, context)
-  }
-
   componentDidMount() {
     let cityName = localStore.getItem(CITY_NAME)
     if (cityName == null) {

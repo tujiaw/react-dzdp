@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import { CROSS_DOMAIN } from '../../config'
 import Style from './style'
 
 class RecommendItem extends Component {
@@ -13,7 +12,7 @@ class RecommendItem extends Component {
       <div style={Style.root}>
         <div style={Style.item}>
           <div>
-            <img style={Style.image} src={ CROSS_DOMAIN + this.props.img } />
+            <img style={Style.image} src={ this.props.img } alt=""/>
           </div>
           <div style={Style.right}>
             <div style={Style.rightTop}>

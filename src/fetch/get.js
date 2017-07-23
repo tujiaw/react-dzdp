@@ -2,8 +2,9 @@ import 'whatwg-fetch'
 import 'es6-promise'
 
 export function get(url) {
+  console.log('get url:' + url)
   return new Promise((resolve, reject) => {
-    var result = fetch(url, {
+    fetch(url, {
       // credentials: 'include',
       headers: {
         'Accept': 'application/json, text/plain, */*'

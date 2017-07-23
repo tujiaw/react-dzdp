@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import { CROSS_DOMAIN } from '../../config'
 import Style from './style'
 
 class AdList extends Component {
@@ -11,7 +10,7 @@ class AdList extends Component {
           {this.props.data.map((item, index) => {
             return <div key={index} style={Style.imageContainer}>
               <a href={item.link}>
-                <img style={Style.image} src={CROSS_DOMAIN + item.img}/>
+                 <img style={Style.image} src={item.img} alt={item.title}/> 
               </a>
             </div>
           })}

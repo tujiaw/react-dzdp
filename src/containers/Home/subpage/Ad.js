@@ -5,10 +5,6 @@ import AdCom from '../../../components/Ad'
 import * as ActionAdinfo from '../../../actions/adinfo'
 
 class Ad extends Component {
-  constructor(props, context) {
-    super(props, context)
-  }
-
   componentDidMount() {
     getAdData()
     .then((res) => {

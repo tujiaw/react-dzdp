@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import { connect } from 'react-redux'
 import RecommendItem from './recommendItem'
 
 class RecommendCom extends Component {

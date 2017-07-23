@@ -6,10 +6,6 @@ import * as ActionRecommendinfo from '../../../actions/recommendinfo'
 import Style from './style'
 
 class Recommend extends Component {
-  constructor(props, context) {
-    super(props, context)
-  }
-
   componentDidMount() {
     getRecommendList(this.props.city, 0)
     .then((json) => {
