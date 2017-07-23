@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
-import { HashRouter as Router, Route } from 'react-router-dom'
+import { HashRouter as Router, Route, Switch } from 'react-router-dom'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import Home from './Home'
 import City from './City'
+import NotFound from './404'
 import localStore from '../utils/localStore'
 import { CITY_NAME } from '../constants/localStoreKey'
 import * as actionsUserinfo from '../actions/userinfo'
@@ -28,10 +29,11 @@ class App extends Component {
   render() {
     const routerMap = (
       <Router>
-        <div>
-          <Route exact path="/" component={Home}/>
-          <Route path="/city" component={City} />
-        </div>
+          <Switch>
+            <Route exact path="/" component={Home}/>
+            <Route path="/city" component={City} />
+            <Route component={NotFound} />
+          </Switch>
       </Router>
     )
 

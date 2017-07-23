@@ -4,6 +4,7 @@ import Footer from '../../components/Footer'
 import { connect } from 'react-redux'
 import ReactSwipe from 'react-swipe'
 import Style from './style'
+import { CROSS_DOMAIN } from '../../config'
 
 class Category extends Component {
   constructor(props, context) {
@@ -21,7 +22,6 @@ class Category extends Component {
       }
     }
 
-    const flag = 'http://read.html5.qq.com/image?src=forum&q=5&r=0&imgflag=7&imageUrl=';
     const imageList = [
       [
         { text: '景点', url: 'http://images2015.cnblogs.com/blog/138012/201610/138012-20161022224203170-1528315005.png' },
@@ -70,7 +70,7 @@ class Category extends Component {
               <div key={index}>
                 <ul style={Style.imageList}>
                   {images.map((image, index2) => {
-                    return <li key={index2} style={{...Style.image, backgroundImage:'url(' + flag + image.url + ')'}}>{image.text}</li>
+                    return <li key={index2} style={{...Style.image, backgroundImage:'url(' + CROSS_DOMAIN + image.url + ')'}}>{image.text}</li>
                   })}
                 </ul>
               </div>

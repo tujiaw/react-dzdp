@@ -1,16 +1,26 @@
 import React, { Component } from 'react'
 import Header from '../../components/Header'
 import Category from '../../components/Category'
+import Ad from './subpage/Ad'
+import Recommend from './subpage/Recommend'
 import Footer from '../../components/Footer'
 import { connect } from 'react-redux'
+import Style from './style'
 
 class Home extends Component {
   render() {
     return (
-      <div>
+      <div style={Style.root}>
         <Header cityName={this.props.userinfo.cityName} />
-        <Category />
-        <Footer />
+        <div style={Style.contentWrap}>
+          <div style={Style.content}>
+            <Category />
+            <div style={Style.blank}></div>
+            <Ad />
+            <Recommend />
+            <Footer />
+          </div>
+        </div>
       </div>
     )
   }

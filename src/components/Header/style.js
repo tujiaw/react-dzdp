@@ -43,7 +43,8 @@ Style.input = {
   overflow: 'hidden',
   padding: 5,
   paddingLeft: 25,
-  border: 0
+  border: 0,
+  outline: 0,
 }
 
 export default Style
