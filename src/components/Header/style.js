@@ -11,7 +11,7 @@ Style.root = {
 }
 
 Style.left = {
-  width: 50,
+  width: 55,
   textAlign: 'left',
   margin: '0px 5px',
 }
