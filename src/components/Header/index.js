@@ -1,12 +1,15 @@
 import React, { Component } from 'react';
 import Style from './style'
+import { Link } from 'react-router-dom'
 
 class Header extends Component {
   render() {
     return (
       <div style={Style.root}>
         <div style={Style.left}>
-          <span>{this.props.cityName}{' '}</span>
+          <Link to="/city" style={Style.cityLink}>
+            {this.props.cityName}{' '}
+          </Link>
           <i className="icon-angle-down"></i>
         </div>
         <div style={Style.mid}>

@@ -24,11 +24,13 @@ Style.right = {
 Style.rightTop = {
   display: 'flex',
   justifyContent: 'space-between',
+  alignItems: 'center'
 }
 
 Style.rightBottom = {
   display: 'flex',
   justifyContent: 'space-between',
+  alignItems: 'center'
 }
 
 Style.image = {

@@ -6,6 +6,10 @@ import * as ActionAdinfo from '../../../actions/adinfo'
 
 class Ad extends Component {
   componentDidMount() {
+    if (this.props.adinfo.data.length) {
+      return
+    }
+    
     getAdData()
     .then((res) => {
       this.props.updateAdinfo(res)

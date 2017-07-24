@@ -6,3 +6,6 @@ export const ADINFO_UPDATE = 'ADINFO_UPDATE'
 
 // 推荐信息
 export const RECOMMENDINFO_UPDATE = 'RECOMMENDINFO_UPDATE'
+
+// 增加推荐信息
+export const RECOMMENDINFO_ADD = 'RECOMMENDINFO_ADD'

@@ -3,11 +3,6 @@ import Style from './style'
 
 class RecommendItem extends Component {
   render() {
-    // 去掉最后一个item的分割线
-    if (this.props.last) {
-      Style.item.borderBottom = '0px'
-    }
-
     return (
       <div style={Style.root}>
         <div style={Style.item}>

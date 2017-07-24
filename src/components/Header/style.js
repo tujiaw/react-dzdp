@@ -27,6 +27,11 @@ Style.right = {
   textAlign: 'right'
 }
 
+Style.cityLink = {
+  textDecoration: 'none',
+  color: '#fff'
+}
+
 Style.iconSearch = {
   position: 'relative',
   left: 22,

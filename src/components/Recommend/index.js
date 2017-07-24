@@ -7,7 +7,7 @@ class RecommendCom extends Component {
     return (
       <div>
         {this.props.list.map((item, index) => {
-          return <RecommendItem key={index} {...item} last={index===(count-1)}/>
+          return <RecommendItem key={index} {...item} />
         })}
       </div>
     )
