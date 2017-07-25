@@ -1,19 +1,11 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { getAdData } from '../../../fetch/home'
 import AdCom from '../../../components/Ad'
 import * as ActionAdinfo from '../../../actions/adinfo'
 
 class Ad extends Component {
   componentDidMount() {
-    if (this.props.adinfo.data.length) {
-      return
-    }
-    
-    getAdData()
-    .then((res) => {
-      this.props.updateAdinfo(res)
-    })
+    this.props.getIfNeedAsync()
   }
 
   render() {
@@ -35,6 +27,9 @@ function mapStateToProps(state) {
 
 function mapDispatchToProps(dispatch) {
   return {
+    getIfNeedAsync: () => {
+      dispatch(ActionAdinfo.getIfNeedAsync())
+    },
     updateAdinfo: (data) => {
       dispatch(ActionAdinfo.update(data))
     }

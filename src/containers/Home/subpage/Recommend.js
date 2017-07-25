@@ -1,91 +1,47 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
+import { bindActionCreators } from 'redux'
 import RecommendCom from '../../../components/Recommend'
-import { getRecommendList } from '../../../fetch/home'
 import * as ActionRecommendinfo from '../../../actions/recommendinfo'
 import LoadMore from '../../../components/LoadMore'
 import Style from './style'
 
 class Recommend extends Component {
-  constructor(props, context) {
-    super(props, context)
-    this.state = {
-      isLoading: false
-    }
-  }
-
   componentDidMount() {
-    if (this.props.list.length) {
-      return
-    }
-    
-    getRecommendList(this.props.city, 0)
-    .then((json) => {
-      if (json.success) {
-        this.props.updateRecommendList(json.data)
-      }
-    })
+    this.props.recommendAction.getInitDataIfNeedAsync(this.props.city)
   }
 
   componentWillReceiveProps(nextProps) {
-    if (nextProps.isScrollBottom) {
-      this.loadMoreData()
+    if (this.props.isScrollBottom !== nextProps.isScrollBottom) {
+      this.props.recommendAction.getMoreDataIfNeedAsync(this.props.city)
     }
-  }
-
-  loadMoreData = () => {
-    console.log('load more ')
-    if (this.state.isLoading || !this.props.hasMore) {
-      return
-    }
-
-    this.setState({
-      isLoading: true
-    })
-
-    getRecommendList(this.props.city, 0)
-    .then((json) => {
-      if (json.success) {
-        this.props.addRecommendList(json.data)
-      }
-      this.setState({
-        isLoading: false
-      })
-    })
   }
 
   render() {
+    const { isFetching, hasMore, list } = this.props.recommendinfo
     return (
       <div>
         <h2 style={Style.recommendTitle}>猜你喜欢</h2>
-        {this.props.list.length 
-          ? <RecommendCom list={this.props.list}/>
+        {list.length 
+          ? <RecommendCom list={list}/>
           : <div>加载中...</div>
         }
-        <LoadMore isLoading={this.state.isLoading} hasMore={this.props.hasMore}/> 
+        <LoadMore isLoading={isFetching} hasMore={hasMore}/> 
       </div>
     )
   }
 }
 
 function mapStateToProps(state) {
-  console.log(state.recommendinfo)
   return {
-    city: state.userinfo.city,
-    list: state.recommendinfo.list,
-    hasMore: state.recommendinfo.hasMore
+    city: state.userinfo.cityName,
+    recommendinfo: state.recommendinfo
   }
 }
 
 function mapDispatchToProps(dispatch) {
   return {
-    updateRecommendList: (data) => {
-      console.log(data)
-      dispatch(ActionRecommendinfo.update(data))
-    },
-    addRecommendList: (data) => {
-      dispatch(ActionRecommendinfo.add(data))
-    }
+    recommendAction: bindActionCreators(ActionRecommendinfo, dispatch)
   }
 }
 

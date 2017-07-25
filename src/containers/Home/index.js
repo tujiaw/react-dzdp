@@ -4,7 +4,6 @@ import Header from '../../components/Header'
 import Category from '../../components/Category'
 import Ad from './subpage/Ad'
 import Recommend from './subpage/Recommend'
-import Footer from '../../components/Footer'
 import { connect } from 'react-redux'
 import Style from './style'
 
@@ -19,10 +18,13 @@ class Home extends Component {
   onScrollHandle(event) {
     const clientHeight = event.target.clientHeight
     const scrollHeight = event.target.scrollHeight
-    const scrollTop = event.target.scrollTop;
-    this.setState({
-      isScrollBottom: (clientHeight + scrollTop === scrollHeight)
-    })
+    const scrollTop = event.target.scrollTop
+    const isBottom = (clientHeight + scrollTop === scrollHeight)
+    if (this.state.isScrollBottom !== isBottom) {
+      this.setState({
+        isScrollBottom: isBottom
+      })
+    }
   }
 
   componentDidMount() {
@@ -45,7 +47,6 @@ class Home extends Component {
             <div style={Style.blank}></div>
             <Ad />
             <Recommend isScrollBottom={this.state.isScrollBottom}/>
-            {/* <Footer /> */}
           </div>
         </div>
       </div>

@@ -1,6 +1,9 @@
 import { RECOMMENDINFO_UPDATE, RECOMMENDINFO_ADD } from '../constants/actionTypes'
 
 const initData = {
+  isFetching: false,
+  currentPage: 0,
+
   hasMore: false,
   list: []
 }
@@ -8,16 +11,16 @@ const initData = {
 export default function recommendinfo(state = initData, action) {
     switch (action.type) {
         case RECOMMENDINFO_UPDATE:
-            return action.data
-        case RECOMMENDINFO_ADD:
-            // fixme 测试
-            if (state.list.length > 20) {
-                return {
-                    hasMore: false,
-                    list: state.list
-                }
-            }
             return {
+                isFetching: false,
+                currentPage: state.currentPage,
+                hasMore: action.data.hasMore,
+                list: action.data.list
+            }
+        case RECOMMENDINFO_ADD:
+            return {
+                isFetching: false,
+                currentPage: state.currentPage + 1,
                 hasMore: action.data.hasMore,
                 list: state.list.concat(action.data.list)
             }

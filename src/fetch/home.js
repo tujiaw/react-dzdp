@@ -7,6 +7,7 @@ export function getAdData() {
 }
 
 export function getRecommendList(city, page) {
+  console.log('getRecommendList city:' + city + ', page:' + page )
   //return get(HOST + '/api/recommend/' + encodeURIComponent(city) + '/' + page)
   return get(HOST + '/api/recommend')
 }
