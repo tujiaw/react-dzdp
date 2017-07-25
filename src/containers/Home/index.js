@@ -7,11 +7,13 @@ import Recommend from './subpage/Recommend'
 import { connect } from 'react-redux'
 import Style from './style'
 
+let scrollTop = 0
 class Home extends Component {
   constructor(props, context) {
     super(props, context)
     this.state = {
-      isScrollBottom: false
+      isScrollBottom: false,
+      contentNode: null
     }
   }
 
@@ -28,13 +30,17 @@ class Home extends Component {
   }
 
   componentDidMount() {
-    const content = ReactDOM.findDOMNode(this.refs.content)
-    content.addEventListener('scroll', this.onScrollHandle.bind(this));
+    if (this.contentNode) {
+      this.contentNode.addEventListener('scroll', this.onScrollHandle.bind(this));
+      this.contentNode.scrollTop = scrollTop
+    }
   }
 
   componentWillUnmount() {
-    const content = ReactDOM.findDOMNode(this.refs.content)
-    content.removeEventListener('scroll', this.onScrollHandle.bind(this));
+    if (this.contentNode) {
+      this.contentNode.removeEventListener('scroll', this.onScrollHandle.bind(this));
+      scrollTop = this.contentNode.scrollTop
+    }
   }
 
   render() {
@@ -42,7 +48,7 @@ class Home extends Component {
       <div style={Style.root}>
         <Header cityName={this.props.userinfo.cityName} />
         <div style={Style.contentWrap}>
-          <div style={Style.content}  ref="content">
+          <div style={Style.content}  ref={ node => this.contentNode = node }>
             <Category />
             <div style={Style.blank}></div>
             <Ad />

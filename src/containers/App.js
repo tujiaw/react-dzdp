@@ -26,8 +26,8 @@ class App extends Component {
     const routerMap = (
       <Router>
           <Switch>
-            <Route exact path="/" component={Home}/>
-            <Route path="/city" component={City} />
+            <Route exact path="/" component={Home} />
+            <Route path="/city" component={City}  />
             <Route component={NotFound} />
           </Switch>
       </Router>

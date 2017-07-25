@@ -1,4 +1,4 @@
-import { RECOMMENDINFO_UPDATE,  RECOMMENDINFO_ADD } from '../constants/actionTypes'
+import { RECOMMENDINFO_UPDATE, RECOMMENDINFO_ADD } from '../constants/actionTypes'
 import { getRecommendList } from '../fetch/home'
 
 export const update = (data) => {
@@ -22,7 +22,7 @@ export const getInitDataIfNeedAsync = (city) => {
       return
     }
 
-    let newRecommendinfo = {...recommendinfo}
+    let newRecommendinfo = { ...recommendinfo }
     newRecommendinfo.isFetching = true
     dispatch(update(newRecommendinfo))
     getRecommendList(city, 0).then(json => {
@@ -40,7 +40,7 @@ export const getMoreDataIfNeedAsync = (city) => {
       return
     }
 
-    let newRecommendinfo = {...recommendinfo}
+    let newRecommendinfo = { ...recommendinfo }
     newRecommendinfo.isFetching = true
     dispatch(update(newRecommendinfo))
     getRecommendList(city, newRecommendinfo.currentPage + 1).then(json => {

@@ -1,3 +1,4 @@
+// 防抖函数 
 export function debounce(fn, delay) {
   // 持久化一个定时器 timer
   let timer = null;
