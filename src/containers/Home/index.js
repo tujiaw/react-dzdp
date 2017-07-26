@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import ReactDOM from 'react-dom';
-import Header from '../../components/Header'
+import HomeHeader from '../../components/HomeHeader'
 import Category from '../../components/Category'
 import Ad from './subpage/Ad'
 import Recommend from './subpage/Recommend'
@@ -46,7 +46,7 @@ class Home extends Component {
   render() {
     return (
       <div style={Style.root}>
-        <Header cityName={this.props.userinfo.cityName} />
+        <HomeHeader cityName={this.props.userinfo.cityName} />
         <div style={Style.contentWrap}>
           <div style={Style.content}  ref={ node => this.contentNode = node }>
             <Category />

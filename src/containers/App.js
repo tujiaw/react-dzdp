@@ -6,22 +6,8 @@ import Home from './Home'
 import City from './City'
 import NotFound from './404'
 import localStore from '../utils/localStore'
-import { CITY_NAME } from '../constants/localStoreKey'
-import * as actionsUserinfo from '../actions/userinfo'
 
 class App extends Component {
-  componentDidMount() {
-    let cityName = localStore.getItem(CITY_NAME)
-    if (cityName == null) {
-      cityName = '上海'
-    }
-
-    console.log(this.props);
-    this.props.userinfoActions.update({
-      cityName: cityName
-    })
-  }
-
   render() {
     const routerMap = (
       <Router>
@@ -45,9 +31,7 @@ function mapStateToProps(state) {
 }
 
 function mapDispatchToProps(dispatch) {
-  return {
-    userinfoActions: bindActionCreators(actionsUserinfo, dispatch)
-  }
+  return { }
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(App)

@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Style from './style'
 import { Link } from 'react-router-dom'
 
-class Header extends Component {
+class HomeHeader extends Component {
   render() {
     return (
       <div style={Style.root}>
@@ -24,4 +24,4 @@ class Header extends Component {
   }
 }
 
-export default Header;
+export default HomeHeader;

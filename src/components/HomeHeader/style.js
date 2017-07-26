@@ -7,7 +7,8 @@ Style.root = {
   padding: '10px',
   color: '#fff',
   fontSize: '16px',
-  lineHeight: 1,
+  height: 30,
+  flexShrink: 0,
 }
 
 Style.left = {
