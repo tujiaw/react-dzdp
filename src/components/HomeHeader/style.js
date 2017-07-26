@@ -28,7 +28,7 @@ Style.right = {
   textAlign: 'right'
 }
 
-Style.cityLink = {
+Style.link = {
   textDecoration: 'none',
   color: '#fff'
 }

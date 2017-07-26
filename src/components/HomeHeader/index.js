@@ -7,17 +7,19 @@ class HomeHeader extends Component {
     return (
       <div style={Style.root}>
         <div style={Style.left}>
-          <Link to="/city" style={Style.cityLink}>
+          <Link to="/city" style={Style.link}>
             {this.props.cityName}{' '}
+            <i className="icon-angle-down"></i>
           </Link>
-          <i className="icon-angle-down"></i>
         </div>
         <div style={Style.mid}>
             <i style={Style.iconSearch} className="icon-search"></i>
             <input style={Style.input} type="text" placeholder="请输入关键字"/>
         </div>
         <div style={Style.right}>
-          <i className="icon-user"></i>
+          <Link to="/user" style={Style.link}>
+            <i className="icon-user"></i>
+          </Link>
         </div>
       </div>
     )

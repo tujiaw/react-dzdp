@@ -4,6 +4,7 @@ import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import Home from './Home'
 import City from './City'
+import User from './User'
 import NotFound from './404'
 import localStore from '../utils/localStore'
 
@@ -14,6 +15,7 @@ class App extends Component {
           <Switch>
             <Route exact path="/" component={Home} />
             <Route path="/city" component={City}  />
+            <Route path="/user" component={User}  />
             <Route component={NotFound} />
           </Switch>
       </Router>
