@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
-import RecommendCom from '../../../components/Recommend'
+import GoodsList from '../../../components/GoodsList'
 import * as ActionRecommendinfo from '../../../actions/recommendinfo'
 import LoadMore from '../../../components/LoadMore'
 import Style from './style'
@@ -23,7 +23,7 @@ class Recommend extends Component {
       <div>
         <h2 style={Style.recommendTitle}>猜你喜欢</h2>
         {list.length 
-          ? <RecommendCom list={list}/>
+          ? <GoodsList list={list}/>
           : <div>加载中...</div>
         }
         <LoadMore isLoading={isFetching} hasMore={hasMore}/> 

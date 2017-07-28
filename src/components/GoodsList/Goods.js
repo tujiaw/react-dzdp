@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import Style from './style'
 
-class RecommendItem extends Component {
+class Goods extends Component {
   render() {
     return (
       <div style={Style.root}>
@@ -28,4 +28,4 @@ class RecommendItem extends Component {
   }
 }
 
-export default RecommendItem
+export default Goods

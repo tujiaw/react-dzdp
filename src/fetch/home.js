@@ -11,3 +11,11 @@ export function getRecommendList(city, page) {
   //return get(HOST + '/api/recommend/' + encodeURIComponent(city) + '/' + page)
   return get(HOST + '/api/recommend')
 }
+
+export function getSearchList(keyword) {
+  console.log('getSearchList keyword:' + keyword)
+  if (keyword == null || keyword.length === 0) {
+    return
+  }
+  return get(HOST + '/api/all')
+}

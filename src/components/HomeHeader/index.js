@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Style from './style'
 import { Link } from 'react-router-dom'
+import SearchInput from '../SearchInput'
 
 class HomeHeader extends Component {
   render() {
@@ -12,10 +13,7 @@ class HomeHeader extends Component {
             <i className="icon-angle-down"></i>
           </Link>
         </div>
-        <div style={Style.mid}>
-            <i style={Style.iconSearch} className="icon-search"></i>
-            <input style={Style.input} type="text" placeholder="请输入关键字"/>
-        </div>
+        <SearchInput onSearch={this.props.onSearch}/>
         <div style={Style.right}>
           <Link to="/user" style={Style.link}>
             <i className="icon-user"></i>

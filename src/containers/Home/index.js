@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import ReactDOM from 'react-dom';
 import HomeHeader from '../../components/HomeHeader'
 import Category from '../../components/Category'
 import Ad from './subpage/Ad'
@@ -43,10 +42,14 @@ class Home extends Component {
     }
   }
 
+  onSearch = (text) => {
+    this.props.history.push('/search/all/' + encodeURIComponent(text))
+  }
+
   render() {
     return (
       <div style={Style.root}>
-        <HomeHeader cityName={this.props.userinfo.cityName} />
+        <HomeHeader cityName={this.props.userinfo.cityName} onSearch={this.onSearch}/>
         <div style={Style.contentWrap}>
           <div style={Style.content}  ref={ node => this.contentNode = node }>
             <Category />
