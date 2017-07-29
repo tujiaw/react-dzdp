@@ -12,3 +12,9 @@ export const RECOMMENDINFO_ADD = 'RECOMMENDINFO_ADD'
 
 // 更新搜索结果
 export const SEARCHINFO_UPDATE = 'SEARCHINFO_UPDATE'
+
+// 更新商户信息
+export const STOREINFO_UPDATE = 'STOREINFO_UPDATE'
+
+// 更新评论信息
+export const COMMENTINFO_UPDATE = 'COMMENTINFO_UPDATE'

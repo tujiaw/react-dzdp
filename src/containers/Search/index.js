@@ -32,7 +32,6 @@ class Search extends React.Component {
   }
 
   componentDidMount() {
-    console.log(this.props)
     const { keyword } = this.props.match.params
     this.onKeywordChanged(keyword)
   }

@@ -1,5 +1,5 @@
 import { SEARCHINFO_UPDATE } from '../constants/actionTypes'
-import { getSearchList } from '../fetch/home'
+import fetchData from '../fetch'
 
 export const update = (data) => {
   return {
@@ -19,12 +19,14 @@ export const getIfNeedAsync = (keyword) => {
     newSearchinfo.isFetching = true
     dispatch(update(newSearchinfo))
 
-    getSearchList(keyword).then((res) => {
+    fetchData.getSearchList(keyword).then((res) => {
       if (res.list == null || !(res.list instanceof Array)) {
         console.error('get search list failed,' + JSON.stringify(res))
         return
       }
       dispatch(update(res))
+    }).catch((err) => {
+      console.log(err)
     })
   }
 }

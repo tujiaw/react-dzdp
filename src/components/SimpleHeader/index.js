@@ -14,7 +14,7 @@ class SimpleHeader extends Component {
           <i className="icon-chevron-left" />
         </span>
         <h1 style={Style.title}>{this.props.title}</h1>
-        <span></span>
+        <div>  </div>
       </div>
     )
   }

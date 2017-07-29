@@ -4,7 +4,8 @@ body {
   font-family: sans-serif;
   background-color: rgb(241, 241, 241);
   min-width: 350px;
-  /* overflow-y: hidden; */
+  overflow-y: hidden;
+  overflow-x: hidden;
 }
 
 ::-webkit-scrollbar {

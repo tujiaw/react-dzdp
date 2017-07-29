@@ -6,6 +6,7 @@ import Home from './Home'
 import City from './City'
 import User from './User'
 import Search from './Search'
+import Detail from './Detail'
 import NotFound from './404'
 
 class App extends Component {
@@ -17,6 +18,7 @@ class App extends Component {
             <Route path="/city" component={City}  />
             <Route path="/user" component={User}  />
              <Route path="/search/all/:keyword" component={Search} /> 
+             <Route path="/detail/:id" component={Detail} /> 
             <Route component={NotFound} />
           </Switch>
       </Router>

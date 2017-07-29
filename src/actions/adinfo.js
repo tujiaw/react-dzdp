@@ -1,5 +1,5 @@
 import { ADINFO_UPDATE } from '../constants/actionTypes'
-import { getAdData } from '../fetch/home'
+import fetchData from '../fetch/'
 
 export const update = (data) => {
     return {
@@ -15,8 +15,10 @@ export const getIfNeedAsync = () => {
       return
     }
 
-    getAdData().then((res) => {
+    fetchData.getAdData().then((res) => {
       dispatch(update(res))
+    }).catch((err) => {
+      console.log(err)
     })
   }
 }

@@ -6,7 +6,7 @@ class GoodsList extends Component {
     return (
       <div>
         {this.props.list.map((item, index) => {
-          return <Goods key={index} {...item} />
+          return <Goods key={index} {...item}/>
         })}
       </div>
     )
