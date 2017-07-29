@@ -17,7 +17,7 @@ Style.image = {
   maxWidth: 160,
   maxHeight: 130,
   width: '40%',
-  height: '40%',
+  height: 'auto',
   borderRadius: 5,
 }
 

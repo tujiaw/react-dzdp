@@ -15,7 +15,7 @@ class HomeHeader extends Component {
         </div>
         <SearchInput onSearch={this.props.onSearch}/>
         <div style={Style.right}>
-          <Link to="/user" style={Style.link}>
+          <Link to="/login" style={Style.link}>
             <i className="icon-user"></i>
           </Link>
         </div>

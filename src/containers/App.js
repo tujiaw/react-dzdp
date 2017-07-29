@@ -4,9 +4,9 @@ import { connect } from 'react-redux'
 import history from '../utils/history'
 import Home from './Home'
 import City from './City'
-import User from './User'
 import Search from './Search'
 import Detail from './Detail'
+import Login from './Login'
 import NotFound from './404'
 
 class App extends Component {
@@ -16,9 +16,9 @@ class App extends Component {
           <Switch>
             <Route exact path="/" component={Home} />
             <Route path="/city" component={City}  />
-            <Route path="/user" component={User}  />
-             <Route path="/search/all/:keyword" component={Search} /> 
-             <Route path="/detail/:id" component={Detail} /> 
+            <Route path="/search/all/:keyword" component={Search} /> 
+            <Route path="/detail/:id" component={Detail} /> 
+            <Route path="/login" component={Login} /> 
             <Route component={NotFound} />
           </Switch>
       </Router>
