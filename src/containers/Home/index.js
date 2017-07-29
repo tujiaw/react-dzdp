@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 import HomeHeader from '../../components/HomeHeader'
 import Category from '../../components/Category'
-import Ad from './subpage/Ad'
-import Recommend from './subpage/Recommend'
+import Ad from './Ad'
+import Recommend from './Recommend'
 import { connect } from 'react-redux'
 import Style from './style'
 

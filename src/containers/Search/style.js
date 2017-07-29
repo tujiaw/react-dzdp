@@ -6,7 +6,6 @@ Style.root = {
 }
 
 Style.listWrap = {
-  flex: 1,
   overflowY: 'scroll', 
 }
 

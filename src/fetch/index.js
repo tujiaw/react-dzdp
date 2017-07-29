@@ -38,7 +38,8 @@ const fetchData = {
     if (page == null || id == null || id.length === 0) {
       return Promise.reject('params error')
     }
-    return get(HOST + '/api/detail/comment/' + page + '/' + id)
+    //return get(HOST + '/api/detail/comment/' + page + '/' + id)
+    return get(HOST + '/api/detail/comment')
   }
 }
 

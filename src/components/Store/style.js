@@ -4,6 +4,7 @@ Style.root = {
   flexDirection: 'column',
   padding: '16px 16px 0px 16px',
   background: '#fff',
+  flexShrink: 0,
 }
 
 Style.top = {

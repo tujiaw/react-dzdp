@@ -1,6 +1,6 @@
 import React from 'react';
 import Style from './style'
-import Star from '../../../components/Star'
+import Star from '../Star'
 
 class Store extends React.Component {
   render() {
