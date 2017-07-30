@@ -24,7 +24,7 @@ class App extends Component {
       </Router>
     )
 
-    return this.props.userinfo.cityName ? routerMap: <div>加载中...</div>
+    return this.props.userinfo.cityname ? routerMap: <div>加载中...</div>
   }
 }
 

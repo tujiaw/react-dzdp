@@ -1,6 +1,6 @@
 import React from 'react'
 import Style from './style'
-import SimpleButton from '../SimpleButton'
+import SolidButton from '../Buttons/SolidButton'
 import Space from '../Space'
 
 class Login extends React.Component {
@@ -44,7 +44,7 @@ class Login extends React.Component {
            <button style={Style.sendCodeButton}>发送验证码</button> 
         </div>
         <Space fixedHeight={10} />
-        <SimpleButton text="登录" onClick={this.onLogin}/>
+        <SolidButton text="登录" onClick={this.onLogin}/>
       </div>
     );
   }

@@ -5,6 +5,7 @@ Style.root = {
   padding: '16px 16px 0px 16px',
   background: '#fff',
   flexShrink: 0,
+  borderBottom: '1px solid #f1f1f1',
 }
 
 Style.top = {

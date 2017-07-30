@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import SimpleHeader from '../../components/SimpleHeader'
-import CityList from '../../components/CityList'
+import CityList from '../../components/Lists/CityList'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 import * as actionsUserinfo from '../../actions/userinfo'
@@ -10,7 +10,7 @@ import Style from './style'
 class City extends Component {
   onCityChanged = (city) => {
     this.props.userinfoActions.update({
-      cityName: city
+      cityname: city
     })
     this.props.history.push('/')
   }
@@ -19,7 +19,7 @@ class City extends Component {
     return (
       <div style={Style.root}>
         <SimpleHeader title="选择城市" />
-        <div style={Style.currentCity}>{this.props.userinfo.cityName}</div>
+        <div style={Style.currentCity}>{this.props.userinfo.cityname}</div>
         <CityList cityList={HOT_CITY_LIST} onChanged={this.onCityChanged}/>
       </div>
     )

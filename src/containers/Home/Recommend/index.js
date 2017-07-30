@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
-import GoodsList from '../../../components/GoodsList'
+import GoodsList from '../../../components/Lists/GoodsList'
 import * as ActionRecommendinfo from '../../../actions/recommendinfo'
 import LoadMore from '../../../components/LoadMore'
 import Style from './style'
@@ -34,7 +34,7 @@ class Recommend extends Component {
 
 function mapStateToProps(state) {
   return {
-    city: state.userinfo.cityName,
+    city: state.userinfo.cityname,
     recommendinfo: state.recommendinfo
   }
 }

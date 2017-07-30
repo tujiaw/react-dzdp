@@ -2,6 +2,7 @@ import React from 'react';
 import Style from './style'
 import SimpleHeader from '../../components/SimpleHeader'
 import Store from '../../components/Store'
+import BuyAndStore from './BuyAndStore'
 import Comment from './Comment'
 import * as ActionStore from '../../actions/storeinfo'
 import * as ActionComment from '../../actions/commentinfo'
@@ -21,6 +22,7 @@ class Detail extends React.Component {
         <SimpleHeader title="商户详情" />
         <div style={Style.scrollWrap}>
           <Store data={this.props.storeinfo} />
+          <BuyAndStore />
           <Comment data={this.props.commentinfo} />
         </div>
       </div>

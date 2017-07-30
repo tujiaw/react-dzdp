@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import Style from './style'
-import { Link } from 'react-router-dom'
-import history from '../../utils/history'
+import history from '../../../utils/history'
 
 class Goods extends Component {
   onClick = () => {

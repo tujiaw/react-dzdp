@@ -1,3 +1,5 @@
+import history from './history'
+
 // 防抖函数 
 export function debounce(fn, delay) {
   // 持久化一个定时器 timer

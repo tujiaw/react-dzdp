@@ -1,6 +1,6 @@
 import React from 'react'
 import Style from './style'
-import CommentList from '../../../components/CommentList'
+import CommentList from '../../../components/Lists/CommentList'
 
 class Comment extends React.Component {
   render() {

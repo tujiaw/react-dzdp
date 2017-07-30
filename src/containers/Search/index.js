@@ -1,6 +1,6 @@
 import React from 'react';
 import SearchHeader from '../../components/SearchHeader'
-import GoodsList from '../../components/GoodsList'
+import GoodsList from '../../components/Lists/GoodsList'
 import { connect } from 'react-redux'
 import * as ActionSearchinfo from '../../actions/searchinfo'
 import { bindActionCreators } from 'redux'

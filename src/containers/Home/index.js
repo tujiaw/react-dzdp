@@ -49,7 +49,7 @@ class Home extends Component {
   render() {
     return (
       <div style={Style.root}>
-        <HomeHeader cityName={this.props.userinfo.cityName} onSearch={this.onSearch}/>
+        <HomeHeader cityname={this.props.userinfo.cityname} onSearch={this.onSearch}/>
         <div style={Style.contentWrap}>
           <div style={Style.content}  ref={ node => this.contentNode = node }>
             <Category />

@@ -9,7 +9,7 @@ class HomeHeader extends Component {
       <div style={Style.root}>
         <div style={Style.left}>
           <Link to="/city" style={Style.link}>
-            {this.props.cityName}{' '}
+            {this.props.cityname}{' '}
             <i className="icon-angle-down"></i>
           </Link>
         </div>

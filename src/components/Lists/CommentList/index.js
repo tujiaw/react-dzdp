@@ -1,5 +1,5 @@
 import React from 'react'
-import Star from '../Star'
+import Star from '../../Star'
 import Style from './style'
 
 class Item extends React.Component {

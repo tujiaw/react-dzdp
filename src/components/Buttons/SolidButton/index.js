@@ -1,7 +1,7 @@
 import React from 'react'
 import Style from './style'
 
-class SimpleButton extends React.Component {
+class SolidButton extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
@@ -21,4 +21,4 @@ class SimpleButton extends React.Component {
   }
 }
 
-export default SimpleButton;
+export default SolidButton;
