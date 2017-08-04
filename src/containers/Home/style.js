@@ -2,8 +2,9 @@ const Style = {}
 
 Style.root = {
   display: 'flex', 
+  flex: 1,
   flexDirection: 'column', 
-  height: '100vh'
+  height: '100vh',
 }
 
 Style.contentWrap = {
